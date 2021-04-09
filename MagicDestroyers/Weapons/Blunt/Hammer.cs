@@ -1,16 +1,7 @@
 ﻿namespace MagicDestroyers.Weapons.Blunt
 {
-    class Hammer
+    class Hammer : Blunt
     {
-
-        private int damagePoints;
-
-        public int DamagePoints
-        {
-            get { return damagePoints; }
-            set { damagePoints = value; }
-        }
-
 
         public Hammer()
         {

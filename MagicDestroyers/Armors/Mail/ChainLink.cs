@@ -1,16 +1,7 @@
 ﻿namespace MagicDestroyers.Armors.Mail
 {
-    class ChainLink
+    public class ChainLink : Armor
     {
-
-        private int armorPoints;
-
-        public int ArmorPoints
-        {
-            get { return armorPoints; }
-            set { armorPoints = value; }
-        }
-
 
         public ChainLink()
         {

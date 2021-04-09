@@ -1,6 +1,6 @@
-﻿namespace MagicDestroyers.Armors.Leather
+﻿namespace MagicDestroyers.Armors
 {
-    class LeatherVest : Armor
+    public class Armor
     {
 
         private int armorPoints;
@@ -11,10 +11,5 @@
             set { armorPoints = value; }
         }
 
-
-        public LeatherVest()
-        {
-
-        }
     }
 }

@@ -1,20 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MagicDestroyers.Armors;
+using MagicDestroyers.Characters.Enumerations;
+using MagicDestroyers.Weapons;
 
 namespace MagicDestroyers.Characters
 {
-    class Character
+    public class Character
     {
         private int abilityPoints;
         private Faction faction;
         private int healthPoints;
         private int level;
         private string name;
-        private ChainLink bodyArmor;
-        private Axe weapon;
+        private Armor bodyArmor;
+        private Weapon weapon;
 
         public int AbilityPoints
         {
@@ -71,7 +69,7 @@ namespace MagicDestroyers.Characters
                 else
                 {
                     System.Console.WriteLine("Wrong input: value is set to default (level=1)");
-                    this.level = 1;         // HAHAHAAH mistake... calls property one more time! 
+                    this.level = 1;
                 }
 
             }
@@ -87,7 +85,7 @@ namespace MagicDestroyers.Characters
                 name = value;
             }
         }
-        public ChainLink BodyArmor
+        public Armor BodyArmor
         {
             get
             {
@@ -98,7 +96,7 @@ namespace MagicDestroyers.Characters
                 bodyArmor = value;
             }
         }
-        public Axe Weapon
+        public Weapon Weapon
         {
             get
             {

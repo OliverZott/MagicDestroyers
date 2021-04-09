@@ -1,26 +1,14 @@
 ﻿namespace MagicDestroyers.Weapons.Sharp
 {
-    class Axe
+    public class Axe : Weapon
     {
-
-        private int damagePoints;
-
-        public int DamagePoints
-        {
-            get { return damagePoints; }
-            set { damagePoints = value; }
-        }
-
 
         public Axe()
         {
-
         }
-
 
         public void HackNSlash()
         {
-
         }
 
     }

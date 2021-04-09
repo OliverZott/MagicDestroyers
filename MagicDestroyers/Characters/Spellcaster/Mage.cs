@@ -3,106 +3,28 @@ using MagicDestroyers.Weapons.Blunt;
 
 namespace MagicDestroyers.Characters.Spellcaster
 {
-    class Mage
+    class Mage : Spellcaster
     {
 
-        private int abilityPoints;
-        private string faction;
-        private int healthPoints;
-        private int level;
-        private string name;
-        private ClothRobe bodyArmor;
-        private Staff weapon;
-
-
-
-        public int AbilityPoints
+        public Mage(string name)
+            : this(name, DEFAULT_LEVEL)
         {
-            get
-            {
-                return abilityPoints;
-            }
-            set
-            {
-                abilityPoints = value;
-            }
         }
 
-        public string Faction
+        public Mage(string name, int level)
+            : this(name, level, DEFAULT_HEALTH_POINTS)
         {
-            get
-            {
-                return faction;
-            }
-            set
-            {
-                faction = value;
-            }
         }
 
-        public int HealthPoints
+        public Mage(string name, int level, int healtPoints)
         {
-            get
-            {
-                return healthPoints;
-            }
-            set
-            {
-                healthPoints = value;
-            }
-        }
-
-        public int Level
-        {
-            get
-            {
-                return level;
-            }
-            set
-            {
-                level = value;
-            }
-        }
-
-        public string Name
-        {
-            get
-            {
-                return name;
-            }
-            set
-            {
-                name = value;
-            }
-        }
-
-        public ClothRobe BodyArmor
-        {
-            get
-            {
-                return bodyArmor;
-            }
-            set
-            {
-                bodyArmor = value;
-            }
-        }
-        public Staff Weapon
-        {
-            get
-            {
-                return weapon;
-            }
-            set
-            {
-                weapon = value;
-            }
-        }
-
-
-        public Mage()
-        {
-
+            this.Name = name;
+            this.Level = level;
+            this.HealthPoints = healtPoints;
+            this.Weapon = new Axe();
+            this.BodyArmor = new ChainLink();
+            this.Faction = DEFAULT_FACTION;
+            this.AbilityPoints = DEFAULT_ABILITY_POINTS;
         }
 
         public void ArcaneWrath()

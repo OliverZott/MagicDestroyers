@@ -1,20 +1,10 @@
 ﻿namespace MagicDestroyers.Armors.Cloth
 {
-    class ClothRobe
+    class ClothRobe : Armor
     {
-
-        private int armorPoints;
-
-        public int ArmorPoints
-        {
-            get { return armorPoints; }
-            set { armorPoints = value; }
-        }
-
 
         public ClothRobe()
         {
-
         }
     }
 }
