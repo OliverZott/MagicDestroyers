@@ -14,6 +14,11 @@ namespace MagicDestroyers.Characters
         private Armor bodyArmor;
         private Weapon weapon;
 
+        // use protected if needed empty constructor on base class
+        protected Character()
+        {
+        }
+
         public Character(string name)
         {
             this.Name = name;
