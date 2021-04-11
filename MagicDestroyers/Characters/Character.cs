@@ -14,6 +14,12 @@ namespace MagicDestroyers.Characters
         private Armor bodyArmor;
         private Weapon weapon;
 
+        public Character(string name)
+        {
+            this.Name = name;
+            System.Console.WriteLine("'Character' class base constructor");
+        }
+
         public int AbilityPoints
         {
             get

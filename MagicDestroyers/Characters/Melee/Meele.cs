@@ -10,5 +10,11 @@ namespace MagicDestroyers.Characters.Melee
         protected const Faction DEFAULT_FACTION = Faction.Melee;
         protected const int DEFAULT_ABILITY_POINTS = 10;
 
+        public Meele(string name)
+            : base(name)
+        {
+            this.Faction = DEFAULT_FACTION;
+            System.Console.WriteLine("'Meeele' class sub-level-1 constructor");
+        }
     }
 }

@@ -17,13 +17,12 @@ namespace MagicDestroyers.Characters.Melee
         }
 
         public Warrior(string name, int level, int healtPoints)
+            : base(name)
         {
-            this.Name = name;
             this.Level = level;
             this.HealthPoints = healtPoints;
             this.Weapon = new Axe();
             this.BodyArmor = new ChainLink();
-            this.Faction = DEFAULT_FACTION;
             this.AbilityPoints = DEFAULT_ABILITY_POINTS;
         }
 

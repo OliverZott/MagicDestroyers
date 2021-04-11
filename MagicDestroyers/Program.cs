@@ -1,4 +1,5 @@
 ﻿using MagicDestroyers.Characters.Melee;
+using MagicDestroyers.Characters.Spellcaster;
 
 namespace MagicDestroyers
 {
@@ -7,6 +8,7 @@ namespace MagicDestroyers
         static void Main(string[] args)
         {
 
+            Mage Lena = new("Lena");
             Warrior Sam = new("Sam", -3, 120);
             System.Console.WriteLine(Sam);
 
