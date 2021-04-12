@@ -1,10 +1,11 @@
 ﻿using MagicDestroyers.Armors;
 using MagicDestroyers.Characters.Enumerations;
+using MagicDestroyers.Characters.Interfaces;
 using MagicDestroyers.Weapons;
 
 namespace MagicDestroyers.Characters
 {
-    public class Character
+    public class Character : IAttack, IDefend
     {
         private int abilityPoints;
         private Faction faction;
@@ -117,6 +118,21 @@ namespace MagicDestroyers.Characters
             {
                 weapon = value;
             }
+        }
+
+        public void Attack()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void SpecialAttack()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Defend()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
