@@ -13,7 +13,7 @@ namespace MagicDestroyers.Characters.Melee
         public Meele(string name)
             : base(name)
         {
-            this.Faction = DEFAULT_FACTION;
+            base.Faction = DEFAULT_FACTION;
             System.Console.WriteLine("'Meeele' class sub-level-1 constructor");
         }
     }

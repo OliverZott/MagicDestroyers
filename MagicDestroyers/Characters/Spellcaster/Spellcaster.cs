@@ -13,7 +13,7 @@ namespace MagicDestroyers.Characters.Spellcaster
         public Spellcaster(string name)
             : base(name)
         {
-            this.Faction = DEFAULT_FACTION;
+            base.Faction = DEFAULT_FACTION;
             System.Console.WriteLine("'Spellcaster' class sub-level-1 constructor");
         }
     }

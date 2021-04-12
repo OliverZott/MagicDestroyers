@@ -20,10 +20,10 @@ namespace MagicDestroyers.Characters.Melee
             : base(name)
         {
             this.Level = level;
-            this.HealthPoints = healtPoints;
-            this.Weapon = new Axe();
-            this.BodyArmor = new ChainLink();
-            this.AbilityPoints = DEFAULT_ABILITY_POINTS;
+            base.HealthPoints = healtPoints;    // WTF ... no difference ?!
+            Weapon = new Axe();
+            base.BodyArmor = new ChainLink();
+            base.AbilityPoints = DEFAULT_ABILITY_POINTS;
         }
 
         public override string ToString()
