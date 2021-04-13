@@ -2,7 +2,7 @@
 
 namespace MagicDestroyers.Characters.Melee
 {
-    public class Meele : Character
+    public abstract class Meele : Character
     {
 
         protected const int DEFAULT_LEVEL = 1;

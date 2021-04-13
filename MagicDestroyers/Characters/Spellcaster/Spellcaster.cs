@@ -2,7 +2,7 @@
 
 namespace MagicDestroyers.Characters.Spellcaster
 {
-    public class Spellcaster : Character
+    public abstract class Spellcaster : Character
     {
 
         protected const int DEFAULT_LEVEL = 1;

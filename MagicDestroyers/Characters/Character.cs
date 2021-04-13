@@ -5,7 +5,7 @@ using MagicDestroyers.Weapons;
 
 namespace MagicDestroyers.Characters
 {
-    public class Character : IAttack, IDefend
+    public abstract class Character : IAttack, IDefend
     {
         private int abilityPoints;
         private Faction faction;
