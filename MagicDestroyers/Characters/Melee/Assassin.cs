@@ -1,108 +1,35 @@
 ﻿using MagicDestroyers.Armors.Leather;
+using MagicDestroyers.Armors.Mail;
 using MagicDestroyers.Weapons.Sharp;
 
 namespace MagicDestroyers.Characters.Melee
 {
-    class Assassin
+    class Assassin : Meele
     {
 
-        private int abilityPoints;
-        private string faction;
-        private int healthPoints;
-        private int level;
-        private string name;
-        private LeatherVest bodyArmor;
-        private Sword weapon;
-
-
-
-        public int AbilityPoints
+        public Assassin(string name)
+            : this(name, DEFAULT_LEVEL)
         {
-            get
-            {
-                return abilityPoints;
-            }
-            set
-            {
-                abilityPoints = value;
-            }
         }
 
-        public string Faction
+        public Assassin(string name, int level)
+            : this(name, level, DEFAULT_HEALTH_POINTS)
         {
-            get
-            {
-                return faction;
-            }
-            set
-            {
-                faction = value;
-            }
         }
 
-        public int HealthPoints
+        public Assassin(string name, int level, int healtPoints)
+            : base(name)
         {
-            get
-            {
-                return healthPoints;
-            }
-            set
-            {
-                healthPoints = value;
-            }
+            this.Level = level;
+            base.HealthPoints = healtPoints;    // WTF ... no difference ?!
+            Weapon = new Axe();
+            base.BodyArmor = new ChainLink();
+            base.AbilityPoints = DEFAULT_ABILITY_POINTS;
         }
 
-        public int Level
+        public override void Attack()
         {
-            get
-            {
-                return level;
-            }
-            set
-            {
-                level = value;
-            }
-        }
-
-        public string Name
-        {
-            get
-            {
-                return name;
-            }
-            set
-            {
-                name = value;
-            }
-        }
-
-        public LeatherVest BodyArmor
-        {
-            get
-            {
-                return bodyArmor;
-            }
-            set
-            {
-                bodyArmor = value;
-            }
-        }
-        public Sword Weapon
-        {
-            get
-            {
-                return weapon;
-            }
-            set
-            {
-                weapon = value;
-            }
-        }
-
-
-        public Assassin()
-        {
-
+            throw new System.NotImplementedException();
         }
 
         public void Bleed()
@@ -110,9 +37,19 @@ namespace MagicDestroyers.Characters.Melee
 
         }
 
+        public override void Defend()
+        {
+            throw new System.NotImplementedException();
+        }
+
         public void Raze()
         {
 
+        }
+
+        public override void SpecialAttack()
+        {
+            throw new System.NotImplementedException();
         }
 
         public void Survival()

@@ -35,6 +35,16 @@ namespace MagicDestroyers.Characters.Spellcaster
 
         }
 
+        public override void Attack()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public override void Defend()
+        {
+            throw new System.NotImplementedException();
+        }
+
         public void Firewall()
         {
 
@@ -45,6 +55,9 @@ namespace MagicDestroyers.Characters.Spellcaster
 
         }
 
-
+        public override void SpecialAttack()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

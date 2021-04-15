@@ -26,10 +26,12 @@ namespace MagicDestroyers.Characters.Melee
             base.AbilityPoints = DEFAULT_ABILITY_POINTS;
         }
 
+
         public override string ToString()
         {
             return base.ToString() + $" --- Weapon: {this.Weapon}, Armor: {this.BodyArmor}";
         }
+
 
         public void Execute()
         {
@@ -43,5 +45,19 @@ namespace MagicDestroyers.Characters.Melee
         {
         }
 
+        public override void Attack()
+        {
+            this.Strike();
+        }
+
+        public override void SpecialAttack()
+        {
+            this.Execute();
+        }
+
+        public override void Defend()
+        {
+            this.SkinHarden();
+        }
     }
 }

@@ -10,6 +10,11 @@ namespace MagicDestroyers.Characters.Spellcaster
         protected const Faction DEFAULT_FACTION = Faction.Spellcaster;
         protected const int DEFAULT_ABILITY_POINTS = 15;
 
+        public Spellcaster()
+            : base()
+        {
+        }
+
         public Spellcaster(string name)
             : base(name)
         {

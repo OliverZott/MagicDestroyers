@@ -7,6 +7,7 @@ namespace MagicDestroyers.Characters
 {
     public abstract class Character : IAttack, IDefend
     {
+
         private int abilityPoints;
         private Faction faction;
         private int healthPoints;
@@ -14,6 +15,7 @@ namespace MagicDestroyers.Characters
         private string name;
         private Armor bodyArmor;
         private Weapon weapon;
+
 
         // use protected if needed empty constructor on base class
         protected Character()
@@ -25,6 +27,7 @@ namespace MagicDestroyers.Characters
             this.Name = name;
             System.Console.WriteLine("'Character' class base constructor");
         }
+
 
         public int AbilityPoints
         {
@@ -120,19 +123,11 @@ namespace MagicDestroyers.Characters
             }
         }
 
-        public void Attack()
-        {
-            throw new System.NotImplementedException();
-        }
 
-        public void SpecialAttack()
-        {
-            throw new System.NotImplementedException();
-        }
+        public abstract void Attack();
 
-        public void Defend()
-        {
-            throw new System.NotImplementedException();
-        }
+        public abstract void SpecialAttack();
+
+        public abstract void Defend();
     }
 }

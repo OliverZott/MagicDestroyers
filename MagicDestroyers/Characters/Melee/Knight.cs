@@ -1,11 +1,21 @@
 ﻿namespace MagicDestroyers.Characters.Melee
 {
-    class Knight
+    class Knight : Character
     {
 
-        public Knight()
+        public Knight(string v)
         {
 
+        }
+
+        public override void Attack()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public override void Defend()
+        {
+            throw new System.NotImplementedException();
         }
 
         public void HolyBlow()
@@ -23,6 +33,9 @@
 
         }
 
-
+        public override void SpecialAttack()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
