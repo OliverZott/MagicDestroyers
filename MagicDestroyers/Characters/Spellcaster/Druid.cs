@@ -3,7 +3,12 @@
     class Druid : Spellcaster
     {
 
-        public Druid(string name )
+        public Druid()
+            : base()
+        {
+        }
+
+        public Druid(string name)
             : base(name)
         {
         }

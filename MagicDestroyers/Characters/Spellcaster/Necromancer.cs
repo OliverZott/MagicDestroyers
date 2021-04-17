@@ -1,11 +1,7 @@
-﻿using MagicDestroyers.Armors.Leather;
-using MagicDestroyers.Weapons.Sharp;
-
-namespace MagicDestroyers.Characters.Spellcaster
+﻿namespace MagicDestroyers.Characters.Spellcaster
 {
     class Necromancer : Spellcaster
     {
-
 
         public Necromancer()
         {

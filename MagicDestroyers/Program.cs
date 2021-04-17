@@ -10,31 +10,30 @@ namespace MagicDestroyers
         static void Main(string[] args)
         {
 
-            Character warrior = new Warrior("WarriorDude");
-            Character knight = new Knight("KnightDude");
-            Character mage = new Mage("MageDude");
-            Character assasin = new Assassin("AssasinDude");
-            Character druid = new Druid("DruidDudess");
-            Character necromancer = new Necromancer();
-
-            Mage Lena = new("Lena");
-            Warrior Sam = new("Sam", -3, 120);
-
-            List<Character> meeleTeam = new();
-            List<Character> spellTeam = new();
-
-            // No access to Meele / Spellcaster methods
-            meeleTeam.Add(warrior);
-            meeleTeam.Add(knight);
-            meeleTeam.Add(assasin);
-
-            spellTeam.Add(druid);
-            spellTeam.Add(mage);
-            spellTeam.Add(necromancer);
-
-            foreach (var charchter in spellTeam)
+            List<Character> characters = new()
             {
-                charchter.Attack();
+                new Warrior(),
+                new Assassin(),
+                new Knight(),
+                new Mage(),
+                new Druid(),
+                new Necromancer()
+            };
+
+
+            List<Meele> meeleTeam = new();
+            List<Spellcaster> spellTeam = new();
+
+            foreach (var character in characters)
+            {
+                if (character is Meele)
+                {
+                    meeleTeam.Add((Meele)character);
+                }
+                else if (character is Spellcaster)
+                {
+                    spellTeam.Add((Spellcaster)character);
+                }
             }
 
         }

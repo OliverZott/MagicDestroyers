@@ -3,6 +3,11 @@
     class Knight : Character
     {
 
+        public Knight()
+            : base()
+        {
+        }
+
         public Knight(string v)
         {
 

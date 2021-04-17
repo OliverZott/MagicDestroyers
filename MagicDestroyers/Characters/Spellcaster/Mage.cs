@@ -6,6 +6,11 @@ namespace MagicDestroyers.Characters.Spellcaster
     class Mage : Spellcaster
     {
 
+        public Mage()
+            : base()
+        {
+        }
+
         public Mage(string name)
             : this(name, DEFAULT_LEVEL)
         {

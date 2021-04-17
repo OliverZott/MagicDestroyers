@@ -1,11 +1,15 @@
-﻿using MagicDestroyers.Armors.Leather;
-using MagicDestroyers.Armors.Mail;
+﻿using MagicDestroyers.Armors.Mail;
 using MagicDestroyers.Weapons.Sharp;
 
 namespace MagicDestroyers.Characters.Melee
 {
     class Assassin : Meele
     {
+
+        public Assassin()
+            : base()
+        {
+        }
 
         public Assassin(string name)
             : this(name, DEFAULT_LEVEL)
@@ -56,7 +60,6 @@ namespace MagicDestroyers.Characters.Melee
         {
 
         }
-
 
     }
 }

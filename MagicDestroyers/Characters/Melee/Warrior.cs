@@ -6,6 +6,11 @@ namespace MagicDestroyers.Characters.Melee
     class Warrior : Meele
     {
 
+        public Warrior()
+            : base()
+        {
+        }
+
         public Warrior(string name)
             : this(name, DEFAULT_LEVEL)
         {
