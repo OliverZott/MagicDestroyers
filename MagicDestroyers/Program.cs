@@ -46,10 +46,13 @@ namespace MagicDestroyers
                 // 1. Take a random melee
                 // 2. Take a random spellcaster
 
+                spellTeam[0].TakeDamage(meeleTeam[0].Attack(), meeleTeam[0].Name);
+
                 // 3. Melee attacks spellcaster
                 // 3.1 Check if melee died and remove in case
                 // 3.2 Take new from team
 
+                meeleTeam[0].TakeDamage(spellTeam[0].Attack(), spellTeam[0].Name);
                 // 4. Spellcaster attacks melee
                 // 4.1 Check if char died and remove in case
                 // 4.2 Take new from team

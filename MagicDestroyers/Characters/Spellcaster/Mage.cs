@@ -35,34 +35,35 @@ namespace MagicDestroyers.Characters.Spellcaster
             System.Console.WriteLine("'Mage' class sub-level-3 constructor");
         }
 
-        public void ArcaneWrath()
+        public int ArcaneWrath()
         {
-
+            return base.Weapon.DamagePoints + 5;
         }
 
-        public override void Attack()
+
+        public int Firewall()
         {
-            throw new System.NotImplementedException();
+            return base.Weapon.DamagePoints + 25;
         }
 
-        public override void Defend()
+        public int Meditaton()
         {
-            throw new System.NotImplementedException();
+            return this.BodyArmor.ArmorPoints + 10;                 // this or base ???? 
         }
 
-        public void Firewall()
+        public override int Attack()
         {
-
+            return this.ArcaneWrath();
         }
 
-        public void Meditaton()
+        public override int SpecialAttack()
         {
-
+            return this.Firewall();
         }
 
-        public override void SpecialAttack()
+        public override int Defend()
         {
-            throw new System.NotImplementedException();
+            return this.Meditaton();
         }
     }
 }

@@ -8,13 +8,16 @@ namespace MagicDestroyers.Characters
     public abstract class Character : IAttack, IDefend
     {
 
-        private int abilityPoints;
+        private Armor bodyArmor;
         private Faction faction;
+        private Weapon weapon;
+
+        private int abilityPoints;
         private int healthPoints;
+        private bool isAlive;
         private int level;
         private string name;
-        private Armor bodyArmor;
-        private Weapon weapon;
+        private int scores;
 
 
         // use protected if needed empty constructor on base class
@@ -29,15 +32,15 @@ namespace MagicDestroyers.Characters
         }
 
 
-        public int AbilityPoints
+        public Armor BodyArmor
         {
             get
             {
-                return abilityPoints;
+                return bodyArmor;
             }
             set
             {
-                abilityPoints = value;
+                bodyArmor = value;
             }
         }
         public Faction Faction
@@ -49,6 +52,29 @@ namespace MagicDestroyers.Characters
             set
             {
                 faction = value;
+            }
+        }
+        public Weapon Weapon
+        {
+            get
+            {
+                return weapon;
+            }
+            set
+            {
+                weapon = value;
+            }
+        }
+
+        public int AbilityPoints
+        {
+            get
+            {
+                return abilityPoints;
+            }
+            set
+            {
+                abilityPoints = value;
             }
         }
         public int HealthPoints
@@ -63,11 +89,20 @@ namespace MagicDestroyers.Characters
                 {
                     healthPoints = value;
                 }
+                else if (value <= 0)
+                {
+                    this.IsAlive = false;
+                }
                 else
                 {
                     throw new System.ArgumentException("Invalid input (range is 1-500");
                 }
             }
+        }
+        public bool IsAlive
+        {
+            get { return this.isAlive; }
+            private set { this.isAlive = value; }
         }
         public int Level
         {
@@ -100,34 +135,40 @@ namespace MagicDestroyers.Characters
                 name = value;
             }
         }
-        public Armor BodyArmor
+        public int Scores
         {
-            get
-            {
-                return bodyArmor;
-            }
-            set
-            {
-                bodyArmor = value;
-            }
-        }
-        public Weapon Weapon
-        {
-            get
-            {
-                return weapon;
-            }
-            set
-            {
-                weapon = value;
-            }
+            get { return this.scores; }
+            private set { this.scores = value; }
         }
 
 
-        public abstract void Attack();
 
-        public abstract void SpecialAttack();
+        public abstract int Attack();
 
-        public abstract void Defend();
+        public abstract int SpecialAttack();
+
+        public abstract int Defend();
+
+        public void TakeDamage(int damage, string attackerName)
+        {
+            if (this.Defend() < damage)
+            {
+                this.HealthPoints -= damage + this.Defend();
+            }
+            else
+            {
+                System.Console.WriteLine("MUAHAHAAH, too much defense for your puny attack =)");
+            }
+
+            if (this.isAlive)
+            {
+                System.Console.WriteLine($"{this.name} took {damage} from {attackerName}, blocked {this.Defend()} and now has {this.HealthPoints} Health");
+            }
+            else
+            {
+                System.Console.WriteLine($"{this.name} took {damage} from {attackerName} and is now dead =( ");
+            }
+
+        }
     }
 }

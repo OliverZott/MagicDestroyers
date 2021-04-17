@@ -38,31 +38,34 @@ namespace MagicDestroyers.Characters.Melee
         }
 
 
-        public void Execute()
+        public int Execute()
         {
+            return base.Weapon.DamagePoints + 15;
         }
 
-        public void SkinHarden()
+        public int SkinHarden()
         {
+            return base.BodyArmor.ArmorPoints + 15;
         }
 
-        public void Strike()
+        public int Strike()
         {
+            return base.Weapon.DamagePoints + 10;
         }
 
-        public override void Attack()
+        public override int Attack()
         {
-            this.Strike();
+            return this.Strike();
         }
 
-        public override void SpecialAttack()
+        public override int SpecialAttack()
         {
-            this.Execute();
+            return this.Execute();
         }
 
-        public override void Defend()
+        public override int Defend()
         {
-            this.SkinHarden();
+            return this.SkinHarden();
         }
     }
 }

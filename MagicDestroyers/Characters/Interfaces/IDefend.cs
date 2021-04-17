@@ -3,7 +3,7 @@
     public interface IDefend
     {
 
-        void Defend();
+        int Defend();
 
     }
 }
