@@ -7,19 +7,23 @@ namespace MagicDestroyers
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
+
+            bool gameOver = false;
 
             List<Character> characters = new()
             {
                 new Warrior(),
-                new Assassin(),
-                new Knight(),
+                new Warrior(),
+                new Warrior(),
+                //new Assassin(),
+                //new Knight(),
                 new Mage(),
-                new Druid(),
-                new Necromancer()
+                new Mage(),
+                //new Druid(),
+                //new Necromancer()
             };
-
 
             List<Meele> meeleTeam = new();
             List<Spellcaster> spellTeam = new();
@@ -35,6 +39,25 @@ namespace MagicDestroyers
                     spellTeam.Add((Spellcaster)character);
                 }
             }
+
+            while (!gameOver)
+            {
+
+                // 1. Take a random melee
+                // 2. Take a random spellcaster
+
+                // 3. Melee attacks spellcaster
+                // 3.1 Check if melee died and remove in case
+                // 3.2 Take new from team
+
+                // 4. Spellcaster attacks melee
+                // 4.1 Check if char died and remove in case
+                // 4.2 Take new from team
+
+                // 5. If no chars from either team left --> game is finished
+
+            }
+
 
         }
     }

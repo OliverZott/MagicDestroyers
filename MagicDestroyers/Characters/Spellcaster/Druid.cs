@@ -1,47 +1,47 @@
-﻿namespace MagicDestroyers.Characters.Spellcaster
-{
-    class Druid : Spellcaster
-    {
+﻿//namespace MagicDestroyers.Characters.Spellcaster
+//{
+//    class Druid : Spellcaster
+//    {
 
-        public Druid()
-            : base()
-        {
-        }
+//        public Druid()
+//            : base()
+//        {
+//        }
 
-        public Druid(string name)
-            : base(name)
-        {
-        }
+//        public Druid(string name)
+//            : base(name)
+//        {
+//        }
 
-        public override void Attack()
-        {
-            throw new System.NotImplementedException();
-        }
+//        public override void Attack()
+//        {
+//            throw new System.NotImplementedException();
+//        }
 
-        public override void Defend()
-        {
-            throw new System.NotImplementedException();
-        }
+//        public override void Defend()
+//        {
+//            throw new System.NotImplementedException();
+//        }
 
-        public void Moonfire()
-        {
+//        public void Moonfire()
+//        {
 
-        }
+//        }
 
-        public void OneWithNature()
-        {
+//        public void OneWithNature()
+//        {
 
-        }
+//        }
 
-        public override void SpecialAttack()
-        {
-            throw new System.NotImplementedException();
-        }
+//        public override void SpecialAttack()
+//        {
+//            throw new System.NotImplementedException();
+//        }
 
-        public void Starburst()
-        {
+//        public void Starburst()
+//        {
 
-        }
+//        }
 
-    }
-}
+//    }
+//}

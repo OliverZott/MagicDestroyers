@@ -1,46 +1,46 @@
-﻿namespace MagicDestroyers.Characters.Melee
-{
-    class Knight : Character
-    {
+﻿//namespace MagicDestroyers.Characters.Melee
+//{
+//    class Knight : Character
+//    {
 
-        public Knight()
-            : base()
-        {
-        }
+//        public Knight()
+//            : base()
+//        {
+//        }
 
-        public Knight(string v)
-        {
+//        public Knight(string v)
+//        {
 
-        }
+//        }
 
-        public override void Attack()
-        {
-            throw new System.NotImplementedException();
-        }
+//        public override void Attack()
+//        {
+//            throw new System.NotImplementedException();
+//        }
 
-        public override void Defend()
-        {
-            throw new System.NotImplementedException();
-        }
+//        public override void Defend()
+//        {
+//            throw new System.NotImplementedException();
+//        }
 
-        public void HolyBlow()
-        {
+//        public void HolyBlow()
+//        {
 
-        }
+//        }
 
-        public void PurifySoul()
-        {
+//        public void PurifySoul()
+//        {
 
-        }
+//        }
 
-        public void RighteousWings()
-        {
+//        public void RighteousWings()
+//        {
 
-        }
+//        }
 
-        public override void SpecialAttack()
-        {
-            throw new System.NotImplementedException();
-        }
-    }
-}
+//        public override void SpecialAttack()
+//        {
+//            throw new System.NotImplementedException();
+//        }
+//    }
+//}

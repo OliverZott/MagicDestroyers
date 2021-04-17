@@ -1,42 +1,42 @@
-﻿namespace MagicDestroyers.Characters.Spellcaster
-{
-    class Necromancer : Spellcaster
-    {
+﻿//namespace MagicDestroyers.Characters.Spellcaster
+//{
+//    class Necromancer : Spellcaster
+//    {
 
-        public Necromancer()
-        {
+//        public Necromancer()
+//        {
 
-        }
+//        }
 
-        public override void Attack()
-        {
-            throw new System.NotImplementedException();
-        }
+//        public override void Attack()
+//        {
+//            throw new System.NotImplementedException();
+//        }
 
-        public void BoneShiled()
-        {
+//        public void BoneShiled()
+//        {
 
-        }
+//        }
 
-        public override void Defend()
-        {
-            throw new System.NotImplementedException();
-        }
+//        public override void Defend()
+//        {
+//            throw new System.NotImplementedException();
+//        }
 
-        public void ShadowRage()
-        {
+//        public void ShadowRage()
+//        {
 
-        }
+//        }
 
-        public override void SpecialAttack()
-        {
-            throw new System.NotImplementedException();
-        }
+//        public override void SpecialAttack()
+//        {
+//            throw new System.NotImplementedException();
+//        }
 
-        public void VampireTouch()
-        {
+//        public void VampireTouch()
+//        {
 
-        }
+//        }
 
-    }
-}
+//    }
+//}
