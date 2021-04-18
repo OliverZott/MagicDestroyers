@@ -6,18 +6,20 @@ namespace MagicDestroyers.Characters.Melee
     class Warrior : Meele
     {
 
+        protected const string DEFAULT_NAME = "WarriorBob";
+
         public Warrior()
-            : base()
+            : this(DEFAULT_NAME)
         {
         }
 
         public Warrior(string name)
-            : this(name, DEFAULT_LEVEL)
+            : this(name, Consts.Warrior.LEVEL)
         {
         }
 
         public Warrior(string name, int level)
-            : this(name, level, DEFAULT_HEALTH_POINTS)
+            : this(name, level, Consts.Warrior.HEALTH_POINTS)
         {
         }
 
@@ -26,9 +28,11 @@ namespace MagicDestroyers.Characters.Melee
         {
             this.Level = level;
             base.HealthPoints = healtPoints;    // WTF ... no difference ?!
-            Weapon = new Axe();
+            base.Weapon = new Axe();
             base.BodyArmor = new ChainLink();
-            base.AbilityPoints = DEFAULT_ABILITY_POINTS;
+            base.AbilityPoints = Consts.Warrior.ABILITY_POINTS;
+            base.IsAlive = true;
+            base.Level = 1;
         }
 
 
@@ -40,7 +44,7 @@ namespace MagicDestroyers.Characters.Melee
 
         public int Execute()
         {
-            return base.Weapon.DamagePoints + 15;
+            return base.Weapon.DamagePoints + 35;
         }
 
         public int SkinHarden()
@@ -50,7 +54,7 @@ namespace MagicDestroyers.Characters.Melee
 
         public int Strike()
         {
-            return base.Weapon.DamagePoints + 10;
+            return base.Weapon.DamagePoints + 30;
         }
 
         public override int Attack()

@@ -1,6 +1,7 @@
 ﻿using MagicDestroyers.Characters;
 using MagicDestroyers.Characters.Melee;
 using MagicDestroyers.Characters.Spellcaster;
+using System;
 using System.Collections.Generic;
 
 namespace MagicDestroyers
@@ -11,6 +12,11 @@ namespace MagicDestroyers
         {
 
             bool gameOver = false;
+
+            Random rng = new Random();
+            Meele currentMeele;
+            Spellcaster currentSpellcaster;
+
 
             List<Character> characters = new()
             {
@@ -43,21 +49,46 @@ namespace MagicDestroyers
             while (!gameOver)
             {
 
-                // 1. Take a random melee
-                // 2. Take a random spellcaster
+                currentMeele = meeleTeam[rng.Next(0, meeleTeam.Count)];
+                currentSpellcaster = spellTeam[rng.Next(0, spellTeam.Count)];
 
-                spellTeam[0].TakeDamage(meeleTeam[0].Attack(), meeleTeam[0].Name);
 
-                // 3. Melee attacks spellcaster
-                // 3.1 Check if melee died and remove in case
-                // 3.2 Take new from team
+                currentSpellcaster.TakeDamage(currentMeele.Attack(), currentMeele.Name);
 
-                meeleTeam[0].TakeDamage(spellTeam[0].Attack(), spellTeam[0].Name);
-                // 4. Spellcaster attacks melee
-                // 4.1 Check if char died and remove in case
-                // 4.2 Take new from team
+                if (!currentSpellcaster.IsAlive)
+                {
+                    currentMeele.WonBattle();
+                    spellTeam.Remove(currentSpellcaster);
 
-                // 5. If no chars from either team left --> game is finished
+                    if (spellTeam.Count == 0)
+                    {
+                        Console.WriteLine("Meele Team wins, no more SpellCasters left!");
+                        break;
+                    }
+                    else
+                    {
+                        currentSpellcaster = spellTeam[rng.Next(0, spellTeam.Count)]; ;
+                    }
+                }
+
+
+                currentMeele.TakeDamage(currentSpellcaster.Attack(), currentSpellcaster.Name);
+
+                if (!currentMeele.IsAlive)
+                {
+                    currentSpellcaster.WonBattle();
+                    meeleTeam.Remove(currentMeele);
+
+                    if (meeleTeam.Count == 0)
+                    {
+                        Console.WriteLine("SpellCaster Team wins, no more SpellCasters left!");
+                        break;
+                    }
+                    else
+                    {
+                        currentMeele = meeleTeam[rng.Next(0, meeleTeam.Count)];
+                    }
+                }
 
             }
 

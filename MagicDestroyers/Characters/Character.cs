@@ -102,7 +102,7 @@ namespace MagicDestroyers.Characters
         public bool IsAlive
         {
             get { return this.isAlive; }
-            private set { this.isAlive = value; }
+            protected set { this.isAlive = value; }
         }
         public int Level
         {
@@ -142,7 +142,6 @@ namespace MagicDestroyers.Characters
         }
 
 
-
         public abstract int Attack();
 
         public abstract int SpecialAttack();
@@ -162,13 +161,24 @@ namespace MagicDestroyers.Characters
 
             if (this.isAlive)
             {
-                System.Console.WriteLine($"{this.name} took {damage} from {attackerName}, blocked {this.Defend()} and now has {this.HealthPoints} Health");
+                System.Console.WriteLine($"{this.name} took {damage} damage from {attackerName}, blocked {this.Defend()} and now has {this.HealthPoints} Health");
             }
             else
             {
-                System.Console.WriteLine($"{this.name} took {damage} from {attackerName} and is now dead =( ");
+                System.Console.WriteLine($"{this.name} took {damage} damage from {attackerName} and is now dead =( ");
             }
 
         }
+
+        public void WonBattle()
+        {
+            this.scores++;
+
+            if (this.scores % 10 == 0)
+            {
+                this.level++;
+            }
+        }
+
     }
 }
