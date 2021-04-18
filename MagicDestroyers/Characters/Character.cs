@@ -161,11 +161,13 @@ namespace MagicDestroyers.Characters
 
             if (this.isAlive)
             {
-                System.Console.WriteLine($"{this.name} took {damage} damage from {attackerName}, blocked {this.Defend()} and now has {this.HealthPoints} Health");
+                // System.Console.WriteLine($"{this.name} took {damage} damage from {attackerName}, blocked {this.Defend()} and now has {this.HealthPoints} Health");
+                Tools.TypeColorMessage($"{this.name} took {damage} damage from {attackerName}, blocked {this.Defend()} and now has {this.HealthPoints} Health", this.GetType().ToString());
             }
             else
             {
-                System.Console.WriteLine($"{this.name} took {damage} damage from {attackerName} and is now dead =( ");
+                // System.Console.WriteLine($"{this.name} took {damage} damage from {attackerName} and is now dead =( ");
+                Tools.TypeColorMessage($"{this.name} took {damage} damage from {attackerName} and is now dead =( ", this.GetType().ToString());
             }
 
         }
