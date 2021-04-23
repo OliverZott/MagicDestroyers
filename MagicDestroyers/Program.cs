@@ -3,6 +3,7 @@ using MagicDestroyers.Characters.Melee;
 using MagicDestroyers.Characters.Spellcaster;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace MagicDestroyers
 {
@@ -16,7 +17,6 @@ namespace MagicDestroyers
             Random rng = new Random();
             Meele currentMeele;
             Spellcaster currentSpellcaster;
-
 
             List<Character> characters = new()
             {
@@ -32,8 +32,15 @@ namespace MagicDestroyers
             };
 
             List<Meele> meeleTeam = new();
-            List<Spellcaster> spellTeam = new();
+            // meeleTeam = characters.OfType<Meele>().ToList();
+            meeleTeam = characters.Where(c => c is Meele).Cast<Meele>().ToList();
 
+            List<Spellcaster> spellTeam = characters.OfType<Spellcaster>().ToList();
+
+
+            /*
+            List<Meele> meeleTeam = new();
+            List<Spellcaster> spellTeam = new();
             foreach (var character in characters)
             {
                 if (character is Meele)
@@ -45,6 +52,7 @@ namespace MagicDestroyers
                     spellTeam.Add((Spellcaster)character);
                 }
             }
+            */
 
             while (!gameOver)
             {
